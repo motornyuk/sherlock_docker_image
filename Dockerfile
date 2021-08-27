@@ -1,4 +1,4 @@
-# 'Version: 20210828.03'
+# 'Version: 20210828.04'
 
 FROM python:3.7-alpine
 RUN apk add --no-cache \
@@ -17,4 +17,4 @@ RUN pip3 install -r /opt/sherlock/requirements.txt \
   && rm -rf /root/.cache/pip/*
 
 WORKDIR /opt/sherlock/sherlock
-ENTRYPOINT ["python3", "sherlock.py"]
+ENTRYPOINT ["python", "sherlock.py"]
