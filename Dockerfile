@@ -1,4 +1,4 @@
-# 'Version: 20210828.04'
+# 'Version: 20210828.05'
 
 FROM python:3.8-alpine
 RUN apk add --no-cache \
@@ -11,7 +11,7 @@ RUN apk add --no-cache \
     linux-headers
 
 WORKDIR /opt
-RUN git clone "https://github.com/sherlock-project/sherlock"
+RUN git clone "https://github.com/sherlock-project/sherlock.git"
 
 RUN pip3 install -r /opt/sherlock/requirements.txt \
   && rm -rf /root/.cache/pip/*
